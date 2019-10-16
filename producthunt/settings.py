@@ -28,7 +28,7 @@ SECRET_KEY = 'o(gn_7-)^m$u0=1rq-_fh(w4dls_5605uvh&fuvh)&n99m9)+i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['producthunt16102019.herokuapp.com','127.0.0.1:8000']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] =  dj_database_url.config(default='')
+DATABASES['default'] =  dj_database_url.config(default='postgres://jmsecrwiaarzik:13c2f1732eb40b05403808d40498aca7545282e4a7e5ea7bc03d09500cf7c70f@ec2-174-129-233-123.compute-1.amazonaws.com:5432/d8vu1vut2uh04l')
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
